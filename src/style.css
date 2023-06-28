@@ -67,7 +67,6 @@ body {
   padding-bottom: 2.5rem;
   border-radius: 1rem;
   word-wrap: break-word;
-  display: none;
 }
 
 .main__star {
@@ -89,6 +88,7 @@ body {
 .main__ul {
   display: flex;
   align-items: center;
+
   margin-bottom: 1.5rem;
   margin-left: -2rem;
   column-gap: 1.2rem;
@@ -98,19 +98,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.number {
   background-color: hsl(210, 18%, 24%);
   color: var(--Light-Grey);
   border-radius: 100%;
   width: 45px;
   height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.main__li:hover {
+.main__li:hover .number {
   background-color: var(--Light-Grey);
   color: var(--White);
   cursor: pointer;
 }
-.main__li:active,
-.main__li:focus {
+
+.main__li input:focus + .number {
   background-color: var(--Orange);
   color: var(--White);
   cursor: pointer;
@@ -148,4 +153,19 @@ body {
 }
 .main__content--two {
   margin: 2.2rem 0 1rem 0;
+}
+.main__form--hidden {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
