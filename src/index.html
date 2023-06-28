@@ -39,29 +39,44 @@
         <form data-form>
           <ul class="main__ul">
             <label class="main__li"
-              ><input type="radio" class="sr-only" /><span class="number"
-                >1</span
-              ></label
+              ><input
+                type="radio"
+                value="1"
+                name="rating"
+                class="sr-only"
+              /><span class="number">1</span></label
             >
             <label class="main__li"
-              ><input type="radio" class="sr-only" /><span class="number"
-                >2</span
-              ></label
+              ><input
+                type="radio"
+                value="2"
+                name="rating"
+                class="sr-only"
+              /><span class="number">2</span></label
             >
             <label class="main__li"
-              ><input type="radio" class="sr-only" /><span class="number"
-                >3</span
-              ></label
+              ><input
+                type="radio"
+                value="3"
+                name="rating"
+                class="sr-only"
+              /><span class="number">3</span></label
             >
             <label class="main__li"
-              ><input type="radio" class="sr-only" /><span class="number"
-                >4</span
-              ></label
+              ><input
+                type="radio"
+                value="4"
+                name="rating"
+                class="sr-only"
+              /><span class="number">4</span></label
             >
             <label class="main__li"
-              ><input type="radio" class="sr-only" /><span class="number"
-                >5</span
-              ></label
+              ><input
+                type="radio"
+                value="5"
+                name="rating"
+                class="sr-only"
+              /><span class="number">5</span></label
             >
           </ul>
           <button type="submit" class="main__btn">Submit</button>
@@ -76,7 +91,7 @@
           <img src="/images/illustration-thank-you.svg" alt="" />
         </div>
         <div class="main__rating">
-          You selected <span class=""></span>
+          You selected {{ result }}
           <!-- Add rating here -->
           out of 5
         </div>
