@@ -25,7 +25,7 @@
   <body class="container">
     <main class="main">
       <!-- Rating state start -->
-      <div data-content class="main__form">
+      <div data-container class="main__form">
         <div class="main__img">
           <img class="main__star" src="/images/icon-star.svg" alt="" />
         </div>
@@ -86,12 +86,12 @@
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <template data-template class="main__result">
+      <div data-template class="main__result none">
         <div class="main__illustration">
           <img src="/images/illustration-thank-you.svg" alt="" />
         </div>
         <div class="main__rating">
-          You selected {{ result }}
+          You selected <span data-rating></span>
           <!-- Add rating here -->
           out of 5
         </div>
@@ -102,7 +102,7 @@
             more support, don’t hesitate to get in touch!
           </p>
         </div>
-      </template>
+      </div>
     </main>
     <!-- Thank you state end -->
 

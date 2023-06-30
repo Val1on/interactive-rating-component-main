@@ -1,20 +1,31 @@
-const container = document.querySelector("[data-container]");
+const container = document.querySelector("main");
 const form = document.querySelector("[data-form]");
-const template = document.querySelector("[data-template]");
+const template = document.getElementsByClassName("main__result");
 
 function selectRating(event) {
   event.preventDefault();
-
-  const rating = targetRating(event.target).get("rating");
+  const formData = new FormData(event.target);
+  const rating = formData.get("rating");
+  if (rating) {
+    submitTap(rating);
+  }
 }
 
-function submitPop(rating) {
-  const clone = document.importNode(template.textContent, true);
-  wrapper.addEventListener("click", myFunction);
-  container.appendChild(clone);
+// function submitPop(rating) {
+//   const newContent = container.importNode(template.content, true);
+//   const putRating = newContent.querySelector("[data-rating]");
+//   putRating.textContent = rating;
 
-  function myFunction() {}
+//   container.innerHTML = "";
+//   container.appendChild(newContent);
+// }
+function submitTap(rating) {
+  const number = template.classList;
+  number.remove("none");
+  const removeClass = container.classList;
+  removeClass.add("none");
+  const ratingTemp = template.querySelector("[data-rating]");
+  ratingTemp.textContent = rating;
 }
 
 form.addEventListener("submit", selectRating);
-form.addEventListener("submit", submitPop);
